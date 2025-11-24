@@ -1,0 +1,145 @@
+/* ---------- Глобальные стили ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #eef1f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ---------- Шапка ---------- */
+header {
+    background: linear-gradient(135deg, #1976d2, #2196f3);
+    color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+button {
+    background: #fff;
+    color: #1976d2;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,.12);
+}
+
+button:hover {
+    background: #e3f2fd;
+    transform: translateY(-1px);
+}
+
+/* ---------- Основная часть ---------- */
+main {
+    padding: 25px;
+}
+
+#locationTitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a237e;
+}
+
+/* ---------- Сетка карточек ---------- */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* ---------- Карточки ---------- */
+.news-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .1);
+    transition: .25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Заголовки ---------- */
+.news-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0d47a1;
+}
+
+/* ---------- Описание ---------- */
+.news-content p {
+    margin-bottom: 15px;
+    color: #444;
+    flex: 1;
+}
+
+/* ---------- Кнопки ---------- */
+.news-content a {
+    text-decoration: none;
+    background: #1976d2;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    transition: .2s;
+    display: inline-block;
+}
+
+.news-content a:hover {
+    background: #0d47a1;
+}
+
+/* ---------- Мобильная адаптация ---------- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    #locationTitle {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    button {
+        font-size: 13px;
+    }
+}
